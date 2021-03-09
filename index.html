@@ -5,17 +5,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Maker Brothers Worldwide&reg;</title>
     <link rel="shortcut icon" type="image/png" href="./assets/imgs/lab-coat-favicon.png">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
+    <div class="row mt-5">
+        <div class="col-sm-8 text-center"></div>
+        <div class="col-sm-4 d-none d-sm-flex justify-content-center justify-content-sm-none">
+            <div class="">
+                <label for="yes_button">
+                    YES /
+                </label>
+            </div>
+            <div class="">
+                <label for="no_button">
+                    &nbsp;No
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-2">
+        <div class="col-sm-8 text-center questions" id="question_text_area">1. A brand must reflex the Principal's Moral
+            values</div>
+        <div class="col-sm-4 d-flex justify-content-center justify-content-sm-none">
+            <div class="form-check mx-1">
+                <div class="d-inline d-sm-none">
+                    <label for="yes_button">
+                        YES
+                    </label>
+
+                </div>
+                <input class="form-check-input yes-form-radio-button" type="radio" name="flexRadioDefault"
+                    onchange="yes_button_clicked(this)" id="yes_button">
+                <audio id="yes_audio_1,2" src="./assets/sounds/question 1,2 yes.wav">
+                </audio>
+                <audio id="yes_audio_3" src="./assets/sounds/3RD QUESTION - .8 SECONDS.mp3">
+                </audio>
+
+            </div>
+            <div class="form-check mx-1">
+                <div class="d-inline d-sm-none">
+                    <label for="no_button">
+                        NO
+                    </label>
+                </div>
+                <input class="form-check-input no-form-radio-button" type="radio" name="flexRadioDefault"
+                    onchange="no_button_clicked()" id="no_button">
+                <audio id="no_audio_1,2" src="./assets/sounds/question 1,2 no.wav">
+                </audio>
+                <audio id="no_audio_3"
+                    src="./assets/sounds/question 3 no (if not all yes, this sound plays at end).wav">
+                </audio>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 <script src="./assets/js/bootstrap.min.js"></script>
-<script src="./assets/js/index.js"></script>
 <script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/index.js"></script>
 
 </html>
