@@ -1,0 +1,90 @@
+body {
+    background-color: #e8f4f0 !important;
+
+}
+
+body:after {
+    animation: grain 8s steps(10) infinite !important;
+    background-image: url("../imgs/noise.png") !important;
+    content: "" !important;
+    height: 300%;
+    background-repeat: repeat !important;
+    position: fixed !important;
+    left: -50%;
+    opacity: 0.3;
+    top: -100%;
+    width: 300%;
+    z-index: -100;
+}
+
+@keyframes grain {
+
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+
+    10% {
+        transform: translate(-5%, -10%)
+    }
+
+    20% {
+        transform: translate(-15%, 5%)
+    }
+
+    30% {
+        transform: translate(7%, -25%)
+    }
+
+    40% {
+        transform: translate(-5%, 25%)
+    }
+
+    50% {
+        transform: translate(-15%, 10%)
+    }
+
+    60% {
+        transform: translate(15%, 0%)
+    }
+
+    70% {
+        transform: translate(0%, 15%)
+    }
+
+    80% {
+        transform: translate(3%, 35%)
+    }
+
+    90% {
+        transform: translate(-10%, 10%)
+    }
+}
+
+.yes-form-radio-button {
+    background-color: transparent !important;
+    border: 1.5px solid #1e7353 !important;
+}
+
+.yes-form-radio-button:checked[type=radio] {
+    background-image: none !important;
+}
+
+.yes-form-radio-button:checked {
+    background-color: #1e7353 !important;
+    border-color: #1e7353 !important;
+}
+
+.no-form-radio-button {
+    background-color: transparent !important;
+    border: 1.5px solid #bd0d21 !important;
+}
+
+.no-form-radio-button:checked[type=radio] {
+    background-image: none !important;
+}
+
+.no-form-radio-button:checked {
+    background-color: #bd0d21 !important;
+    border-color: #bd0d21 !important;
+}

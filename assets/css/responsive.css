@@ -1,0 +1,7 @@
+@media (min-width:580px)
+{
+    .justify-content-sm-none
+    {
+        justify-content: start !important;
+    }
+}
