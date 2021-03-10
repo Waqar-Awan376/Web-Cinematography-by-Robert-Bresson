@@ -1,42 +1,71 @@
-let questions =
-{
-    "question1": "1. A brand must reflect the Principal’s moral values.",
-    "question2": "2. Honour vision by adhering to the aesthetic.",
-    "question3": "3. Share your thinking with listeners."
-}
 var curQuestion = 1;
 var selectedAnswers = [];
-function yes_button_clicked(caller) {
+$(`#question2`).fadeOut(1);
+$(`#question3`).fadeOut(1);
+function yesFadeOut() {
     selectedAnswers.push('yes');
     if (curQuestion == 3) {
         var audio = document.getElementById("yes_audio_3");
         audio.play();
+        window.location.href = "../../home1.html";
         return;
     }
     var audio = document.getElementById("yes_audio_1,2");
     audio.play();
-    curQuestion++;
-    $("#question_text_area").text(questions[`question${curQuestion}`])
-    document.getElementById('yes_button').checked = false;
+    $(`#question${curQuestion}`).fadeOut('slow', function () {
+        $(`#question${curQuestion}`).fadeIn('slow');
+    });
 }
-function no_button_clicked() {
+function noFadeOut() {
     if (curQuestion == 3) {
-        if (selectedAnswers.indexOf("no") == -1) {
+        if (selectedAnswers.indexOf("no") == (-1)) {
             var audio = document.getElementById("no_audio_1,2");
             audio.play();
+            window.location.href = "../../home1.html";
             return;
         }
         else {
             var audio = document.getElementById("no_audio_3");
             audio.play();
+            window.location.href = "../../home1.html";
             return;
         }
-
     }
     selectedAnswers.push('no');
     var audio = document.getElementById("no_audio_1,2");
     audio.play();
-    curQuestion++;
-    $("#question_text_area").text(questions[`question${curQuestion}`]);
-    document.getElementById('no_button').checked = false;
+    $(`#question${curQuestion}`).fadeOut('slow', function () {
+        $(`#question${curQuestion}`).fadeIn('slow');
+    });
 }
+function yes_button_clicked() {
+    yesFadeOut();
+    curQuestion++;
+}
+function no_button_clicked() {
+    noFadeOut();
+    curQuestion++;
+}
+
+// ~~~~~~~~~~ HOME1.html javascript ~~~~~~~~~~ //
+$(function () {
+    // CLOSE AND REMOVE ON ESC
+    $(document).on('keyup', function (e) {
+        if (e.keyCode == 27) {
+            $('.overlay').remove();
+        }
+    });
+
+    // CLOSE AND REMOVE ON CLICK
+    $('body').on('click', '.overlay, .close', function () {
+        $('.overlay').remove();
+    });
+
+    // SO PLAYING WITH THE VIDEO CONTROLS DOES NOT
+    // CLOSE THE POPUP
+    $('body').on('click', '.videoBox', function (e) {
+        e.stopPropagation();
+    });
+});
+
+// ~~~~~~~~~~ HOME1.html javascript ~~~~~~~~~~ //

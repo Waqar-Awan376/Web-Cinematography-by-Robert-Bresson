@@ -88,3 +88,84 @@ body:after {
     background-color: #bd0d21 !important;
     border-color: #bd0d21 !important;
 }
+
+
+/* ~~~~~~~~~~ HOME1.html styling ~~~~~~~~~~ */
+.overlay {
+    width: 100%;
+    background: rgba(0, 0, 0, .75);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.videoBox {
+    position: fixed;
+    width: 90%;
+    left: 50%;
+    top: 52%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.videoBox video {
+    width: 100%;
+}
+
+.close {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    display: block;
+    background: transparent url(../imgs/close.png) no-repeat center center;
+    opacity: 0.9;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.top-video {
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+/* ~~~~~~~~~~ HOME1.html styling ~~~~~~~~~~ */
+
+
+
+/* ~~~~~~~~~~ PROPERTIES ~~~~~~~~~~ */
+.w-640 {
+    width: 640px !important;
+}
+
+.h-564 {
+    height: 564px !important;
+}
+
+.font-size-3em {
+    font-size: 3em;
+}
+
+.margin-top-100 {
+    margin-top: 100px !important;
+}
+
+/* ~~~~~~~~~~ PROPERTIES ~~~~~~~~~~ */
+.communicatePrimaryStrength li {
+    font-size: 1.5em;
+}
+
+.communicatePrimaryStrength li::marker {
+    content: "* ";
+    font-weight: bolder;
+    display: inline-block;
+    margin-left: -1em;
+    font-size: 20px;
+}

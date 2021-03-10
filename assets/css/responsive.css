@@ -1,7 +1,11 @@
-@media (min-width:580px)
-{
-    .justify-content-sm-none
-    {
+@media (min-width:580px) {
+    .justify-content-sm-none {
         justify-content: start !important;
+    }
+}
+
+@media (min-width: 767px) {
+    .videoBox {
+        width: 50%;
     }
 }
