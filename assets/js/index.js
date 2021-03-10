@@ -7,8 +7,9 @@ function yesFadeOut() {
     if (curQuestion == 3) {
         var audio = document.getElementById("yes_audio_3");
         audio.play();
-        window.location.href = "../../home1.html";
-        return;
+        $(`#question${curQuestion}`).fadeOut(1200, function () {
+            window.location.href = "../../home1.html";
+        });
     }
     var audio = document.getElementById("yes_audio_1,2");
     audio.play();
@@ -17,18 +18,27 @@ function yesFadeOut() {
     });
 }
 function noFadeOut() {
+    if (curQuestion == 1) {
+        var audio = document.getElementById("no_audio_1,2");
+        audio.play();
+        $(`#question${curQuestion}`).fadeOut(1200, function () {
+            window.location.href = "../../home1.html";
+        });
+    }
     if (curQuestion == 3) {
         if (selectedAnswers.indexOf("no") == (-1)) {
             var audio = document.getElementById("no_audio_1,2");
             audio.play();
-            window.location.href = "../../home1.html";
-            return;
+            $(`#question${curQuestion}`).fadeOut(1200, function () {
+                window.location.href = "../../home1.html";
+            });
         }
         else {
             var audio = document.getElementById("no_audio_3");
             audio.play();
-            window.location.href = "../../home1.html";
-            return;
+            $(`#question${curQuestion}`).fadeOut(1200, function () {
+                window.location.href = "../../home1.html";
+            });
         }
     }
     selectedAnswers.push('no');

@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.my--25 {
+    margin-top: 8rem !important;
+    margin-bottom: 8rem !important;
+}
+
+.communicate-section .heading {
+    margin-bottom: 1.5rem;
+}
+
+.details li {
+    font-style: italic;
+}
+
+.communicate-section .btn,
+.posts-secion .btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    background: #8fa8a0;
+    padding: 6px 20px 6px 20px;
+    text-decoration: none;
+}
+
+.communicate-section .btn:hover,
+.posts-secion .btn:hover {
+    background: #80a397;
+    text-decoration: none;
+    color: white;
+}
+
+.communicate-section .btn-outline {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #80a397;
+    font-size: 14px;
+    background: #ffffff00;
+    padding: 6px 20px 6px 20px;
+    border: solid #80a397 1px;
+    text-decoration: none;
+}
+
+.communicate-section .btn-outline:hover {
+    background: #80a397;
+    text-decoration: none;
+    color: #e8f4f0;
+
+}
+
+.horizonal-rule {
+    border-top: 2.5px solid #80a397;
+}
+
+.posts-secion img:hover {
+    cursor: zoom-in;
+}
+
+#show-more-btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #a88f97;
+    font-size: 14px;
+    background: #ffffff00;
+    padding: 6px 20px 6px 20px;
+    border: solid #a88f97 1px;
+    text-decoration: none;
+    width: 75px;
+}
+
+#show-more-btn:hover {
+    background: #a88f97;
+    text-decoration: none;
+    color: #e8f4f0;
+}
+
+#share-btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #e8f4f0;
+    background: #b8b64e !important;
+    font-size: 14px;
+    background: #ffffff00;
+    padding: 6px 20px 6px 20px;
+    border: solid #b8b64e 1px;
+    text-decoration: none;
+    width: 75px;
+
+}
+
+
+
+#share-btn:hover {
+    background: #bdbb63 !important;
+    text-decoration: none;
+
+}
+
+
+.text-link {
+    color: #bbcec8;
+    text-decoration: none;
+}
+
+@media (min-width:1024px) {
+    .post-image-size-enlarge {
+        height: 100vh !important;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+@media (min-width:320px) and (max-width:1023px) {
+    .post-image-size-enlarge {
+        width: 100% !important;
+    }
+}
+
+.height-auto {
+    height: auto;
+}
+
+#tooltip-text {
+    background-color: black;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 13px;
+    visibility: hidden;
+}
+
+.share-btn:hover #tooltip-text {
+    visibility: visible;
+}
